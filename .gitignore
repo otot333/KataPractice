@@ -4,3 +4,9 @@
 KataPractice/bin/
 
 KataPractice/obj/
+
+KataPracticeTests/obj/
+
+KataPracticeTests/bin/
+
+*.TMP
