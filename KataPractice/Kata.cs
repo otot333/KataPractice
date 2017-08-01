@@ -12,7 +12,8 @@ namespace KataPractice
         {
             var result = "";
             var number = 0;
-            if (!Int32.TryParse(c.ToString(), out number)) {
+            if (!Int32.TryParse(c.ToString(), out number))
+            {
                 throw new Exception("Can not parse object to int");
             };
             if (number * number > 1000)
@@ -47,7 +48,18 @@ namespace KataPractice
 
         public static int[] InvertValues(int[] number)
         {
-            return number.Select(x=>x*(-1)).ToArray();
+            return number.Select(x => x * (-1)).ToArray();
+        }
+
+        public static object Evil(int number)
+        {
+            var evilList = new List<int>() { 3, 5, 6, 9, 10, 12, 15, 17, 18, 20 };
+            var odiousList = new List<int>() { 1, 2, 4, 7, 8, 11, 13, 14, 16, 19 };
+            if (evilList.Contains(number))
+                return "It's Evil!";
+            else if (odiousList.Contains(number))
+                return "It's Odious!";
+            return "It's Odious!";
         }
     }
 }

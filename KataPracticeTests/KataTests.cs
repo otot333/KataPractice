@@ -204,5 +204,40 @@ namespace KataPractice.Tests
 
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void EvilTest_Give3_ThenRetrunEvil()
+        {
+            var number = 3;
+            var expected = "It's Evil!";
+
+            var actual = Kata.Evil(number);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        //Evil First ten: 3, 5, 6, 9, 10, 12, 15, 17, 18, 20
+        //Odious First ten: 1, 2, 4, 7, 8, 11, 13, 14, 16, 19
+        [TestMethod()]
+        public void EvilTest_Give1_ThenRetrunOdious()
+        {
+            var number = 1;
+            var expected = "It's Odious!"; // "It's Odious!"
+
+            var actual = Kata.Evil(number);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void EvilTest_GiveEmpty_ThenRetrunEmpty()
+        {
+            var number = 100;
+            var expected = "It's Odious!"; // "It's Odious!"
+
+            var actual = Kata.Evil(number);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
