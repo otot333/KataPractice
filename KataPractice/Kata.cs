@@ -45,5 +45,9 @@ namespace KataPractice
             return null;
         }
 
+        public static int[] InvertValues(int[] number)
+        {
+            return number.Select(x=>x*(-1)).ToArray();
+        }
     }
 }

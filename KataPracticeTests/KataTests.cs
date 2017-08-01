@@ -184,5 +184,25 @@ namespace KataPractice.Tests
             var actual = Kata.ParseF(str);
             Assert.AreEqual(expected, actual);
         }
+
+        //[TestMethod()]
+        //public void InvertValuesTest_Give1_ThenReturnnegatives()
+        //{
+        //    var number = 1;
+        //    var expected = -1;
+        //    var actual = Kata.InvertValues(number);
+
+        //    Assert.AreEqual(expected, actual);
+        //}
+
+        [TestMethod()]
+        public void InvertValuesTest_GiveIntList_ThenReturnInvertList()
+        {
+            var numberArray = new int[7] { 0, 1, -1, 2, -2, 3, -3 };
+            var expected = new int[7] { 0, -1, 1, -2, 2, -3, 3 };
+            var actual = Kata.InvertValues(numberArray);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }
