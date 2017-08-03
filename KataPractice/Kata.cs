@@ -53,13 +53,20 @@ namespace KataPractice
 
         public static object Evil(int number)
         {
-            var evilList = new List<int>() { 3, 5, 6, 9, 10, 12, 15, 17, 18, 20 };
-            var odiousList = new List<int>() { 1, 2, 4, 7, 8, 11, 13, 14, 16, 19 };
-            if (evilList.Contains(number))
+            if (number == 0)
+                return "";
+
+            var binaryNumber = Convert.ToString(number, 2).ToArray().Select(x => x.ToString());
+            var haveOneCount = (from num in binaryNumber
+                                group num by num into oneCount
+                                where oneCount.Key == "1"
+                                select new { oneCount.Key, count = oneCount.Count() }).FirstOrDefault().count;
+
+            if (haveOneCount % 2 == 0)
                 return "It's Evil!";
-            else if (odiousList.Contains(number))
+            else
                 return "It's Odious!";
-            return "It's Odious!";
+            
         }
     }
 }
