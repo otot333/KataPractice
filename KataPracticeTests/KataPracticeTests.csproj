@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ArgeTests.cs" />
+    <Compile Include="KataClass\EvenOrOddTests.cs" />
     <Compile Include="KataTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

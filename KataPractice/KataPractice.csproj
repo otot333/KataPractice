@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Arge.cs" />
     <Compile Include="Kata.cs" />
+    <Compile Include="KataClass\EvenOrOdd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
